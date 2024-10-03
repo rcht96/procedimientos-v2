@@ -1,0 +1,208 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #003d71
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #003d71
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.4); /* Fondo blanco semitransparente */
+  border-radius: 20px; /* Bordes más redondeados */
+  padding: 30px; /* Mayor padding para más espacio */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Desenfoque de fondo */
+  box-shadow: 0 6px 12px rgba(62, 72, 216, 0.2); /* Mayor sombra */
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out; /* Animación suave de aparición */
+}
+
+/* Animación para el contenedor al cargar la página */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Comienza ligeramente desplazado hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Regresa a su posición original */
+  }
+}
+
+/* Estilos para centrar la imagen */
+.header-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px; /* Espacio entre la imagen y el título */
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 150px; /* Ajusta la altura máxima según lo que necesites */
+}
+
+h1 {
+  color: #ffffff; /* Texto blanco */
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #ffffff; /* Texto blanco */
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Estilos del botón */
+button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #d11d1d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google_icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #3367D6; /* Cambio de color en hover */
+  box-shadow: 0 4px 8px rgba(51, 103, 214, 0.3); /* Sombra en hover */
+  transform: translateY(-2px); /* Levantamiento leve en hover */
+}
+
+/* Estilos para el preloader */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #003d71; /* Color de fondo del preloader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader con animación */
+.loader {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.loader .bar {
+  width: 20px;
+  height: 20px;
+  background-color: #db2929;
+  animation: move 1.5s ease-in-out infinite; /* Animación infinita */
+}
+
+.loader .bar:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader .bar:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader .bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.loader .bar:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Animación de las barras */
+@keyframes move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#file-list {
+  margin-top: 20px;
+}
+
+#file-list div {
+  margin-bottom: 10px;
+}
+
+iframe {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .login-subtitle {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .login-subtitle {
+    font-size: 12px;
+  }
+}

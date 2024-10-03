@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procedimientos Institucionales</title>
+  <link rel="stylesheet" href="styles-View.css">
+  <link rel="icon" type="public/.png" href="favicon.png"/>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="header-image">
+      <a href="https://www.prescott.edu.pe/" class="header-image">
+        <img src="imagenes/Prescott_logo.png" alt="Logo Prescott"/>
+      </a>
+    </div>
+    <div class="header-links">
+      <a href="https://www.prescott.edu.pe/apps/pages/index.jsp?uREC_ID=3831138&type=d&pREC_ID=2472926" class="header-link">
+        <img src="imagenes/subir-archivo.png" alt= "Subir Archivos">
+      </a>
+      <a href="https://prescott.sieweb.com.pe/sistema/login" class="header-link">
+        <img src="imagenes/sieweb_logo.png" alt="Sieweb">        
+      </a>
+      <a href="https://www.prescott.edu.pe/apps/news/" class="header-link">
+        <img src="imagenes/noticias_logo.png" alt="Noticias">        
+      </a>
+      <a href="https://www.prescott.edu.pe/apps/pages/index.jsp?uREC_ID=1663597&type=d&pREC_ID=1812696" class="header-link">
+        <img src="imagenes/trabajaconnosotros_logo.png" alt="Trabaja con nosotros">
+      </a>
+      
+    </div>
+    
+  </div>
+   
+  <div class="container">
+    <h2 class="section-title"> Procedimientos Institucionales</h2>
+    <div class="search-bar">
+      <select id="folder-filter" onchange="filterFiles()">
+        
+        <!-- Agrega más opciones según las carpetas disponibles en tu Google Drive -->
+      </select>
+    </div> 
+
+    <input type="text" id="search-input" placeholder="Buscar Archivos..." oninput="filterFiles()">
+    <div id="file-list" class="file-list"></div>
+    
+    <!-- Contenedor del pop-up -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+          <span id="close-popup" class="close-button">&times;</span>
+          <iframe id="popup-preview" class="popup-iframe"></iframe>
+      </div>
+    </div>
+
+    <button id="logout-button" onclick="logout()">Salir</button>
+  </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Colegio Prescott. Todos los derechos reservados</p>
+    </footer>
+
+  
+  <script src="scripts.js"></script>
+</body>
+</html>

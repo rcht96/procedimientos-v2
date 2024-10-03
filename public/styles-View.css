@@ -1,0 +1,516 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f7f7
+}
+.header {
+  width: 100%;
+  height: auto; /* Ajusta el alto según lo que necesites */
+  background-color: #003d71; /* Color de fondo del header */
+  display: flex;
+  justify-content: space-between; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente */
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.header-image img {
+  max-width: 80%;
+  height: auto;
+  display: flex;
+  max-height: 80px;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Espacio entre los íconos */
+  text-decoration: none;
+  color: white; /* Texto blanco */
+  font-size: 14px; /* Ajusta el tamaño del texto */
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header-link img {
+  height: 50px; /* Tamaño de los íconos */
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  transition: all 0.3s ease; /* Transición para el efecto hover */
+}
+
+.header-link span {
+  font-size: 14px;
+  color: white; /* Color del texto */
+}
+
+.header-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo al pasar el cursor */
+}
+
+.header-link:hover img {
+  transform: scale(1.1); /* Aumentar el tamaño del ícono */
+}
+
+.header-link:hover span {
+  color: #f5f5f5; /* Cambiar el color del texto en hover */
+}
+.section-title{
+  text-align: center;
+  color: #003d71;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+h1 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  font-family: Verdana;
+}
+
+ /* Estilos para el preloader */
+ #preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #003d71; /* Color de fondo de la pantalla de preload */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Loader simple con animación */
+.loader {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.loader .bar {
+  width: 20px;
+  height: 20px;
+  background-color: #db2929; 
+  animation: move 1.5s ease-in-out infinite; /* Animación infinita */
+}
+
+/* Diferentes tiempos de inicio para cada barra */
+.loader .bar:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader .bar:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader .bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.loader .bar:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Animación de las barras */
+@keyframes move {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+.lds-spinner {
+  color: currentColor;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3.2px;
+  left: 36.8px;
+  width: 6.4px;
+  height: 17.6px;
+  border-radius: 20%;
+  background: currentColor;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.container {
+  background-color: #FFFFFF; /* Color gris claro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 5px;
+}
+
+#logout-button:hover {
+  background-color: #e60000;
+  box-shadow: 0 4px 8px rgba(255, 8, 8, 0.678);
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px; /* Espacio entre los elementos */
+  padding: 10px;
+  width: 100%;
+}
+
+.file-item {
+  background-color: #f9f9f9;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-item:hover {
+  background-color: #e9e9e9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.file-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.file-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-size: 12px;
+  color: #333;
+  white-space: wrap; /* Evita el salto de línea */
+  overflow: hidden; /* Oculta el desbordamiento */
+  text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+  max-width: 150px; /* Ajusta este valor para mostrar más caracteres */
+  margin-top: 8px;
+  text-transform: lowercase; /* Asegura que el texto esté en minúsculas */
+}
+.file-name::first-letter{
+  text-transform: uppercase;
+}
+
+.preview {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: none;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+}
+
+.login-container button {
+  background-color: #4285F4;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #3367D6;
+  box-shadow: 0 4px 8px rgba(51, 103, 214, 0.3);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+
+  .header-image img {
+    max-width: 80%; /* Reduce el tamaño del logo en pantallas más pequeñas */
+    height: auto;
+    max-height: 120px; /* Ajuste para pantallas más pequeñas */
+  }
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 100%;
+    width: 95%;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+
+  #logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .file-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .file-icon {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 10px;
+    max-width: 100%;
+    width: 95%;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  #logout-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .file-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .file-icon {
+    font-size: 30px;
+  }
+  
+
+}
+.footer {
+  background-color: #003d71;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  width: 94.9%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#folder-filter {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilos para el pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.popup-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Oculta el desbordamiento del iframe */
+}
+
+.popup-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: left;
+  font-size: 50px;
+  cursor: pointer;
+  color: #000000;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#close-popup {
+  position: absolute;
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 10px; /* Cambia 'right' por 'left' si quieres la "X" a la izquierda */
+  background-color: #fff; 
+  border: none;
+  color: #000; /* Color de la "X" por defecto */
+  font-size: 25px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Añade una transición para un efecto suave */
+}
+
+#close-popup:hover {
+  background-color: #f1f1f1; /* Cambia el fondo al pasar el cursor */
+  color: #003d71; /* Cambia el color de la "X" a rojo cuando el cursor está encima */
+}
